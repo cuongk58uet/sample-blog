@@ -7,6 +7,7 @@
   <link rel="icon" type="image/png" href="/icon.png">
   <link rel="stylesheet" href="{!! asset('css/bootstrap.css') !!}">
   <link rel="stylesheet" href="{!! asset('css/bootstrap-theme.css') !!}">
+  <link rel="stylesheet" href="{!! asset('css/style.css') !!}">
   <title>@yield('title')</title>
 
 </head>
