@@ -1,0 +1,12 @@
+#readmore {
+  margin-left: 50%;
+  margin-bottom: 10px;
+}
+
+@media only screen and (min-width: 600px){
+  #readmore {
+    margin-left: 80%;
+    margin-bottom: 10px;
+  }
+}
+

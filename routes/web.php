@@ -11,8 +11,5 @@
 |
 */
 
-Route::get('/', function () {
-    return view('posts.index');
-});
-
-Route::get('/home', 'PagesController@index');
+Route::get('/', 'PostsController@index');
+Route::get('/post/{id}', 'PostsController@show');
