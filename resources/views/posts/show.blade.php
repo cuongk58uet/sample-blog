@@ -8,7 +8,7 @@
         <h1 class="mt-4">{{$post->title}}</h1>
         <p class="lead">by Anonymous</p>
         <hr>
-        <p>Posted on <?php echo date('d/m/Y', strtotime($post->created_at)) ?></p>
+        <b>Posted on <?php echo date('d/m/Y', strtotime($post->created_at)) ?></b>
         <hr>
         <p class="lead">{{$post->content}}</p>
         <hr>
