@@ -15,7 +15,7 @@
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
       <ul class="nav navbar-nav">
         <li class="active"><a href="/">All Post <span class="sr-only">(current)</span></a></li>
-        <li><a href="#">Create Post</a></li>
+        <li><a href="/posts/create">Create Post</a></li>
         <li class="dropdown">
           <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">List <span class="caret"></span></a>
           <ul class="dropdown-menu">

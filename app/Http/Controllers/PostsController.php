@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Post;
+use App\Http\Requests\PostFormRequest;
 
 class PostsController extends Controller
 {
@@ -14,7 +15,7 @@ class PostsController extends Controller
      */
     public function index()
     {
-        $posts = Post::paginate(5);
+        $posts = Post::orderBy('id', 'desc')->paginate(5);
         return view('posts.index', compact('posts'));
     }
 
@@ -25,7 +26,7 @@ class PostsController extends Controller
      */
     public function create()
     {
-        //
+        return view('posts.create');
     }
 
     /**
@@ -34,9 +35,15 @@ class PostsController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function store(PostFormRequest $request)
     {
-        //
+        $post = new Post(array(
+            'title' => $request->get('title'),
+            'content' => $request->get('content')
+        ));
+        $post->save();
+
+        return redirect('/')->with('status', 'Create success!');
     }
 
     /**

@@ -10,7 +10,7 @@
         <hr>
         <b>Posted on <?php echo date('d/m/Y', strtotime($post->created_at)) ?></b>
         <hr>
-        <p class="lead">{{$post->content}}</p>
+        <p>{{$post->content}}</p>
         <hr>
         <div class="card my-4">
           <h5 class="card-header">Leave a Comment:</h5>
@@ -32,17 +32,7 @@
         </div>
       </div>
       <div class="col-md-4">
-        <div class="panel panel-default">
-          <div class="panel-heading">Search</div>
-          <div class="panel-body">
-            <div class="input-group">
-              <input type="text" class="form-control" placeholder="Search for...">
-              <span class="input-group-btn">
-                <button class="btn btn-secondary" type="button">Go!</button>
-              </span>
-            </div>
-          </div>
-        </div>
+        @include('shared.sidebar')
       </div>
     </div>
   </div>
